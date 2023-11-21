@@ -262,14 +262,14 @@ var requestSelection = {
 const setEventosListener = (container) => {
     var children = [].slice.call(container.children)
     children.forEach(evento => {
-        evento.querySelector(".icons").children[0].addEventListener('click', () => selector(0, evento, children))
-        evento.querySelector(".icons").children[1].addEventListener('click', () => selector(1, evento, children))
-        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => selector(0, evento, children))
-        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => selector(1, evento, children))
+        evento.querySelector(".icons").children[0].addEventListener('click', () => selector(0, evento, children, "click"))
+        evento.querySelector(".icons").children[1].addEventListener('click', () => selector(1, evento, children, "click"))
+        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => selector(0, evento, children, "tap"))
+        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => selector(1, evento, children, "tap"))
     })
 }
 
-const selector = (icon, evento, children) => {
+const selector = (icon, evento, children, ee) => {
     if(icon == 0) {
         requestSelection.isEdit = true;
         requestSelection.isDelete = false;
@@ -291,14 +291,14 @@ const selector = (icon, evento, children) => {
 
         evento.classList.add("selected-delete")
     }
-    console.log(requestSelection)
+    console.log(requestSelection, ee)
 }
 
 const determineRequest = () => {
     if(requestSelection.isEdit){
-        putInfo();
+        //putInfo();
     }else if(requestSelection.isDelete){
-        deleteInfo();
+        //deleteInfo();
     }
     else {
         reloadd();
