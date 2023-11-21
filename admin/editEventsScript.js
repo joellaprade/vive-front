@@ -250,6 +250,13 @@ const injectEvents = () => {
         </div>
         `
     })
+    setEventosListener();
+}
+
+const setEventosListener = () => {
+    var children = [].slice.call(container.children)
+    console.log(children)
+    // children.forEach()
 }
 
 const postBtn = document.getElementById('post')
