@@ -262,45 +262,51 @@ var requestSelection = {
 const setEventosListener = (container) => {
     var children = [].slice.call(container.children)
     children.forEach(evento => {
-        evento.querySelector(".icons").children[0].addEventListener('click', () => {
-            requestSelection.isEdit = true;
-            requestSelection.isDelete = false;
-            requestSelection.id = evento.id;
-        })
-        evento.querySelector(".icons").children[1].addEventListener('click', () => {
-            requestSelection.isEdit = false;
-            requestSelection.isDelete = true;
-            requestSelection.id = evento.id;
-        })
-        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => {
-            requestSelection.isEdit = true;
-            requestSelection.isDelete = false;
-            requestSelection.id = evento.id;
-            console.log(requestSelection)
-        })
-        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => {
-            requestSelection.isEdit = false;
-            requestSelection.isDelete = true;
-            requestSelection.id = evento.id;
-            console.log(requestSelection)
-        })
+        evento.querySelector(".icons").children[0].addEventListener('click', () => selector(0, evento, children))
+        evento.querySelector(".icons").children[1].addEventListener('click', () => selector(1, evento, children))
+        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => selector(0, evento, children))
+        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => selector(1, evento, children))
     })
+}
+
+const selector = (icon, evento, children) => {
+    if(icon == 0) {
+        requestSelection.isEdit = true;
+        requestSelection.isDelete = false;
+        requestSelection.id = evento.id;
+
+        children.forEach(evento => {
+            evento.className = "";
+        })
+
+        evento.classList.add("selected-edit")
+    }else if(icon == 1) {
+        requestSelection.isEdit = false;
+        requestSelection.isDelete = true;
+        requestSelection.id = evento.id;
+
+        children.forEach(evento => {
+            evento.className = "";
+        })
+
+        evento.classList.add("selected-delete")
+    }
     console.log(requestSelection)
 }
 
-const postBtn = document.getElementById('post')
-postBtn.addEventListener('click', postInfo)
-postBtn.addEventListener('click', () => {
+const submitBtn = document.getElementById('submit')
+submitBtn.addEventListener('click', determineRequest)
+submitBtn.addEventListener('click', () => {
     setTimeout(() => {
         reloadd();
     }, 500)
 })
 
-async function postInfo(e){
+async function putInfo(e){
     e.preventDefault();
-    const res = await fetch(baseUrl + 'postEvent', 
+    const res = await fetch(baseUrl + 'putEvent', 
         {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 "Content-Type": 'application/json'
             },
@@ -308,6 +314,14 @@ async function postInfo(e){
                 parcel: setDatos(),
                 authentication: setAuthentication()
             })
+    })
+}
+
+async function deleteInfo(e){
+    e.preventDefault();
+    const res = await fetch(baseUrl + 'deleteEvent', 
+        {
+            method: 'DELETE',
     })
 }
 
@@ -321,3 +335,26 @@ async function getInfo(){
 }
 
 getInfo();
+
+
+const determineRequest = () => {
+    if(requestSelection.isEdit){
+        putInfo();
+    }else if(requestSelection.isDelete){
+        deleteInfo();
+    }
+    else {
+        reloadd();
+    }
+}
+
+
+/*
+
+To dos:
+
+selector
+incluir id en put y delete
+backend
+
+*/
