@@ -272,6 +272,16 @@ const setEventosListener = (container) => {
             requestSelection.isDelete = true;
             requestSelection.id = evento.id;
         })
+        evento.querySelector(".icons").children[0].addEventListener('touchend', () => {
+            requestSelection.isEdit = true;
+            requestSelection.isDelete = false;
+            requestSelection.id = evento.id;
+        })
+        evento.querySelector(".icons").children[1].addEventListener('touchend', () => {
+            requestSelection.isEdit = false;
+            requestSelection.isDelete = true;
+            requestSelection.id = evento.id;
+        })
     })
     console.log(requestSelection)
 }
