@@ -264,8 +264,6 @@ const setEventosListener = (container) => {
     children.forEach(evento => {
         evento.querySelector(".icons").children[0].addEventListener('click', () => selector(0, evento, children, "click"))
         evento.querySelector(".icons").children[1].addEventListener('click', () => selector(1, evento, children, "click"))
-        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => selector(0, evento, children, "tap"))
-        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => selector(1, evento, children, "tap"))
     })
 }
 
