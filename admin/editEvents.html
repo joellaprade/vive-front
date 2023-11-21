@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <link rel="stylesheet" href="blogFormStyles.css">
+           <script src="../components/head.js"></script>
+    </head>
+        <body>
+        <div id="background-container"></div>
+        <script src="../components/background.js"></script>
+        <nav></nav>
+        <script src="../components/nav.js"></script>
+
+        <form>
+            <div>
+                <label for="">T&iacute;tulo</label>
+                <input type="text" name="titulo" id="titulo-blog"><br>
+            </div>
+            <div>
+                <label for="">Prevista</label>
+                <textarea id="prevista-blog" rows="4" cols="25"></textarea>
+            </div>
+            <div>
+                <label for="">Cuerpo</label>
+                <textarea id="cuerpo-blog" rows="4" cols="25"></textarea>
+            </div>
+            <br><br><br>
+            <label for="mail">Correo</label>
+            <input type="text" name="mail" id="mail">
+            <label for="password">Contrase&ntilde;a</label>
+            <input type="password" name="password" id="password">
+            <button id="post">POST</button>
+            <br><br><br>
+        </form>
+
+        <footer id="footer"></footer>
+        <script src="../components/footer.js"></script>
+
+
+        <script src="../baseUrl.js"></script>
+        <script src="blogFormScript.js"></script>
+        <script src="../globalScript.js"></script>
+    </body>
+</html>
