@@ -36,6 +36,7 @@ form > div > label{
     border-radius: 20px;
     margin-bottom: 50px;
     padding: 20px 50px;
+    position: relative;
 }
 
 .event-list > div {
@@ -48,6 +49,7 @@ form > div > label{
     box-sizing: border-box;
     border-radius: 10px;
     padding: 0px 10px;
+    width: 100%;
 }
 
 .event-list > div > p {
