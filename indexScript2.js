@@ -13,7 +13,6 @@ var eventosIngresados;
 var eventosHero = [];
 
 //CAMBIAR URL
-const baseUrl = 'http://jlaprade.futbol/';
 
 window.addEventListener('load', getInfo)
 
@@ -238,7 +237,7 @@ var scaleHalf = window.screen.width > 1000 ? 'scale(0.5)' : 'scale(1)';
 
 for(i = 0; i < elementNumber; i++){
     container.innerHTML += 
-        `<div id="${ i }" class=\"testimonial fade-in-half\" >
+        `<div id="${ i }" class=\"testimonial \" >
             <img src="${ elements.testimonials[i].photo }" class="testimonial-photo">
             <img src="../assets/testimonios/quotes.png" class="quotes">
             <h3>${ elements.testimonials[i].name }</h3>
@@ -283,18 +282,21 @@ boxes[middleElement].style.transform = `scale(1)`;
 
 const moveLeft = () => {
     for(i = 0; i < elementNumber; i++){
-        boxes[i].style.transition = "transform 0.5s ease-in-out, opacity 0.5s ease-in-out";
         if(j == middleElement + 2){
+            boxes[j].style.transition = "transform 0.5s ease-in-out, opacity 0.5s ease-in-out";
             boxes[j].style.transform = `translateX(-${elementMovement}px) ${scaleHalf}`;
             boxes[j].style.opacity = '1';
             j++;
         }else if(j == middleElement + 1){
+            boxes[j].style.transition = "transform 0.5s ease-in-out";
             boxes[j].style.transform = `translateX(-${elementMovement}px) scale(1)`;//scale(2)
             j++;
         }else if(j == middleElement){
+            boxes[j].style.transition = "transform 0.5s ease-in-out";
             boxes[j].style.transform = `translateX(-${elementMovement}px) ${scaleHalf}`; 
             j++;
         }else if(j == middleElement - 1){
+            boxes[j].style.transition = "transform 0.5s ease-in-out, opacity 0.5s ease-in-out";
             boxes[j].style.transform = `translateX(-${elementMovement}px) ${scaleHalf}`;
             boxes[j].style.opacity = '0';
             j++;
@@ -303,6 +305,7 @@ const moveLeft = () => {
             boxes[j].style.transform = `translateX(${elementMovement*elementNumber-elementWidth}px)`;
             j++
         }else{
+            boxes[j].style.transition = "transform 0.5s ease-in-out";
             boxes[j].style.transform = `translateX(-${elementMovement}px)`;
             j++;
         }    
@@ -328,7 +331,6 @@ const moveLeft = () => {
             boxes[middleElement - 1].style.opacity = '1';
         }
         boxes[middleElement].style.transform = "scale(1)"
-        boxes[middleElement].style.transition = "opacity 0.5s ease-in-out"
     },500)
 }
 
@@ -406,8 +408,6 @@ const moveRight = () => {
 
 
 
-//SWIPPE DETECTION
-
 let touchArea = boxes[middleElement];
 
 let leftSecondary = boxes[middleElement - 1]
@@ -478,7 +478,7 @@ touchArea.addEventListener(events[deviceType].move,
         getXY(event);
         let diffX = mouseX - initialX;
         let diffY = mouseY - initialY;
-        if(Math.abs(diffY*10) > Math.abs(diffX)){
+        if(Math.abs(diffY) > Math.abs(diffX)){
             swiped = "none";
         }else if(diffX > 0){
             swiped = "right";
