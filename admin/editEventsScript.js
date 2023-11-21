@@ -275,7 +275,9 @@ const selector = (evento, children, icon) => {
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
 
-        console.log(evento.querySelector(".icons").children)
+        evento.querySelector(".icons").children.forEach(ee => {
+            console.log('ran')
+        })
 
         evento.querySelector(".icons").children.forEach(icon => {
             icon.className = "";
