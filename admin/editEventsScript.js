@@ -275,21 +275,21 @@ const selector = (evento, children, icon) => {
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
 
-        icon.forEach(evento => {
+        children.forEach(evento => {
             evento.className = "";
         })
 
-        evento.classList.add("selected-edit")
+        icon.classList.add("selected-edit")
     }else if(icon == evento.querySelector(".icons").children[1]) {
         requestSelection.isEdit = false;
         requestSelection.isDelete = true;
         requestSelection.id = evento.id;
 
-        icon.forEach(evento => {
+        children.forEach(evento => {
             evento.className = "";
         })
 
-        evento.classList.add("selected-delete")
+        icon.classList.add("selected-delete")
     }
     console.log(requestSelection)
 }
