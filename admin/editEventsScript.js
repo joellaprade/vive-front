@@ -253,10 +253,27 @@ const injectEvents = () => {
     setEventosListener(container);
 }
 
+var requestSelection = {
+    isEdit: false,
+    isDelete: false,
+    id: null,
+}
+
 const setEventosListener = (container) => {
     var children = [].slice.call(container.children)
-    console.log(children)
-    // children.forEach()
+    children.forEach(evento => {
+        evento.querySelector(".icons").children[0].addEventListener('click', () => {
+            requestSelection.isEdit = true;
+            requestSelection.isDelete = false;
+            requestSelection.id = evento.id;
+        })
+        evento.querySelector(".icons").children[1].addEventListener('click', () => {
+            requestSelection.isEdit = false;
+            requestSelection.isDelete = true;
+            requestSelection.id = evento.id;
+        })
+    })
+    console.log(requestSelection)
 }
 
 const postBtn = document.getElementById('post')
