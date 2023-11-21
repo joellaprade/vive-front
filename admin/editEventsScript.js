@@ -241,9 +241,13 @@ const injectEvents = () => {
 
     eventosIngresados.forEach(evento => {
         container.innerHTML += `
-            <div>
-                
+        <div id=${_id}>
+            <p>${evento.nombreEvento}</p>
+            <div class="icons">
+                <img src="/assets/pencil.png" alt="">
+                <img src="/assets/trash.png" alt="">
             </div>
+        </div>
         `
     })
 }
@@ -281,4 +285,4 @@ async function getInfo(e){
     injectEvents();
 }
 
-getInfo()
+getInfo();
