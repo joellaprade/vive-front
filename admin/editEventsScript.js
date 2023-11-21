@@ -291,8 +291,9 @@ const selector = (evento, children, icon) => {
 }
 
 const determineRequest = (id) => {
+    console.log(requestSelection.isEdit)
     if(requestSelection.isEdit){
-        //putInfo(id);
+        putInfo(id);
     }else if(requestSelection.isDelete){
         //deleteInfo(id);
     }
