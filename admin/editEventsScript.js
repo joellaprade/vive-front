@@ -331,8 +331,12 @@ async function putInfo(id, e){
 async function deleteInfo(id, e){
     e.preventDefault();
     const res = await fetch(baseUrl + `deleteEvent/${id}`, 
-        {
-            method: 'DELETE',
+    {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        authentication: setAuthentication();
     })
 }
 
