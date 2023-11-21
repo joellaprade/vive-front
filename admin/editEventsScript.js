@@ -276,11 +276,13 @@ const setEventosListener = (container) => {
             requestSelection.isEdit = true;
             requestSelection.isDelete = false;
             requestSelection.id = evento.id;
+            console.log(requestSelection)
         })
         evento.querySelector(".icons").children[1].addEventListener('touchstart', () => {
             requestSelection.isEdit = false;
             requestSelection.isDelete = true;
             requestSelection.id = evento.id;
+            console.log(requestSelection)
         })
     })
     console.log(requestSelection)
