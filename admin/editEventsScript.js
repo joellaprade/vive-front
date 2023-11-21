@@ -294,6 +294,17 @@ const selector = (icon, evento, children) => {
     console.log(requestSelection)
 }
 
+const determineRequest = () => {
+    if(requestSelection.isEdit){
+        putInfo();
+    }else if(requestSelection.isDelete){
+        deleteInfo();
+    }
+    else {
+        reloadd();
+    }
+}
+
 const submitBtn = document.getElementById('submit')
 submitBtn.addEventListener('click', determineRequest)
 submitBtn.addEventListener('click', () => {
@@ -337,16 +348,7 @@ async function getInfo(){
 getInfo();
 
 
-const determineRequest = () => {
-    if(requestSelection.isEdit){
-        putInfo();
-    }else if(requestSelection.isDelete){
-        deleteInfo();
-    }
-    else {
-        reloadd();
-    }
-}
+
 
 
 /*
