@@ -275,7 +275,7 @@ const selector = (evento, children, icon) => {
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
 
-        evento.querySelector(".icons").forEach(icon => {
+        evento.querySelector(".icons").children.forEach(icon => {
             icon.className = "";
         })
 
@@ -285,7 +285,7 @@ const selector = (evento, children, icon) => {
         requestSelection.isDelete = true;
         requestSelection.id = evento.id;
 
-        evento.querySelector(".icons").forEach(icon => {
+        evento.querySelector(".icons").children.forEach(icon => {
             icon.className = "";
         })
 
