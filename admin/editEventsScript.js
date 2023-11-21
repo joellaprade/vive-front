@@ -270,16 +270,14 @@ const setEventosListener = (container) => {
 }
 
 const selector = (evento, children, icon) => {
+    var eventosArray = [].splice.call(evento.querySelector(".icons").children)
+
     if(icon == evento.querySelector(".icons").children[0]) {
         requestSelection.isEdit = true;
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
 
-        evento.querySelector(".icons").children.forEach(ee => {
-            console.log('ran')
-        })
-
-        evento.querySelector(".icons").children.forEach(icon => {
+        eventosArray.forEach(icon => {
             icon.className = "";
         })
 
@@ -289,7 +287,7 @@ const selector = (evento, children, icon) => {
         requestSelection.isDelete = true;
         requestSelection.id = evento.id;
 
-        evento.querySelector(".icons").children.forEach(icon => {
+        eventosArray.forEach(icon => {
             icon.className = "";
         })
 
