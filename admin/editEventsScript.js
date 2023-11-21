@@ -295,7 +295,7 @@ const determineRequest = (id, e) => {
     if(requestSelection.isEdit){
         putInfo(id, e);
     }else if(requestSelection.isDelete){
-        //deleteInfo(id);
+        deleteInfo(id, e);
     }
     else {
         reloadd();
@@ -330,7 +330,7 @@ async function putInfo(id, e){
 
 async function deleteInfo(id, e){
     e.preventDefault();
-    const res = await fetch(baseUrl + 'deleteEvent', 
+    const res = await fetch(baseUrl + `deleteEvent/${id}`, 
         {
             method: 'DELETE',
     })
