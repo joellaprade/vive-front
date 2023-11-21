@@ -1,0 +1,75 @@
+.container {
+    height: calc(1200px - 15vw);
+}
+#testimonials {
+    margin-top: calc(60px + 3vw);
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: hidden;
+    color: white;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: calc(45vw + 150px);
+    height: auto;
+    padding: calc(30px + 3vw);
+    box-sizing: border-box;
+
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 4px 30px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 30px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 30px 1px rgba(0,0,0,0.25);    background-color: white;
+    color: #2e2e2e;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.person-info {
+    display: flex;
+    flex-direction: row;
+}
+.idk {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.person-info img {
+    align-self: center;
+    width: clamp(7.438rem, 6.237rem + 4.803vw, 12rem);
+}
+.text {
+    margin-top: calc(25px + 2vw);
+}
+.quotes {
+    width: 9vw;
+    height: 9vw;
+}
+.testimonial > img {
+    width: calc(6vw + 30px) !important;
+    height: calc(6vw + 30px) !important;
+}
+.testimonial > p {
+    display: none;
+}
+
+@media screen and (max-width: 1100px){
+    .testimonial {
+        margin: 0px 100px;
+    }
+    .testimonial > p {
+        display: block;
+    }
+}

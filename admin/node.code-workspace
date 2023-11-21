@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../../../node"
+		},
+		{
+			"path": "../../../../chess"
+		},
+		{
+			"path": "../../../../test/Calendario"
+		},
+		{
+			"path": "../../../node 2"
+		},
+		{
+			"path": "../../../../vive"
+		},
+		{
+			"path": "../../../ViveNode"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "eo"
+	}
+}
