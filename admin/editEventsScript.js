@@ -275,8 +275,7 @@ async function postInfo(e){
     })
 }
 
-async function getInfo(e){
-    e.preventDefault();
+async function getInfo(){
     const res = await fetch(baseUrl + 'getEvents', 
         {
             method: 'GET'
