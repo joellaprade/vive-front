@@ -68,6 +68,19 @@ form > div > label{
 }
 
 
+.selected-edit {
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color: rgba(4, 255, 0, 0.573);
+}
+
+.selected-delete {
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color: rgba(255, 0, 0, 0.573);
+}
+
+
 @media screen and (max-width: 700px){
     form > div > *{
         margin-left: 10px;   
