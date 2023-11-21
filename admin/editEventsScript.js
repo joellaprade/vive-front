@@ -315,7 +315,7 @@ submitBtn.addEventListener('click', () => {
 async function putInfo(id, e){
     e.preventDefault();
     console.log(setDatos(), id)
-    const res = await fetch(baseUrl + `putEvent/:${id}`, 
+    const res = await fetch(baseUrl + `putEvent/${id}`, 
         {
             method: 'PUT',
             headers: {
