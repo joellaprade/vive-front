@@ -262,34 +262,36 @@ var requestSelection = {
 const setEventosListener = (container) => {
     var children = [].slice.call(container.children)
     children.forEach(evento => {
-        evento.querySelector(".icons").children[0].addEventListener('click', () => selector(0, evento, children, "click"))
-        evento.querySelector(".icons").children[1].addEventListener('click', () => selector(1, evento, children, "click"))
+        var editIcon = evento.querySelector(".icons").children[0];
+        var deleteIcon = evento.querySelector(".icons").children[1];
+        editIcon.addEventListener('click', () => selector(evento, children, editIcon))
+        deleteIcon.addEventListener('click', () => selector(evento, children, deleteIcon))
     })
 }
 
-const selector = (icon, evento, children, ee) => {
-    if(icon == 0) {
+const selector = (evento, children, icon) => {
+    if(icon == evento.querySelector(".icons").children[0]) {
         requestSelection.isEdit = true;
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
 
-        children.forEach(evento => {
+        icon.forEach(evento => {
             evento.className = "";
         })
 
         evento.classList.add("selected-edit")
-    }else if(icon == 1) {
+    }else if(icon == evento.querySelector(".icons").children[1]) {
         requestSelection.isEdit = false;
         requestSelection.isDelete = true;
         requestSelection.id = evento.id;
 
-        children.forEach(evento => {
+        icon.forEach(evento => {
             evento.className = "";
         })
 
         evento.classList.add("selected-delete")
     }
-    console.log(requestSelection, ee)
+    console.log(requestSelection)
 }
 
 const determineRequest = () => {
