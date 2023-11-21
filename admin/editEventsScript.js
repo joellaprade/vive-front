@@ -241,7 +241,7 @@ const injectEvents = () => {
 
     eventosIngresados.forEach(evento => {
         container.innerHTML += `
-        <div id=${_id}>
+        <div id=${evento._id}>
             <p>${evento.nombreEvento}</p>
             <div class="icons">
                 <img src="/assets/pencil.png" alt="">
