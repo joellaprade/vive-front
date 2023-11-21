@@ -303,8 +303,8 @@ const determineRequest = (id, e) => {
 }
 
 const submitBtn = document.getElementById('submit')
-submitBtn.addEventListener('click', () => {
-    determineRequest(requestSelection.id)
+submitBtn.addEventListener('click', (e) => {
+    determineRequest(requestSelection.id, e)
 })
 submitBtn.addEventListener('click', () => {
     setTimeout(() => {
@@ -312,7 +312,7 @@ submitBtn.addEventListener('click', () => {
     }, 500)
 })
 
-async function putInfo(e, id){
+async function putInfo(id, e){
     e.preventDefault();
     console.log(setDatos(), id)
     const res = await fetch(baseUrl + `putEvent/${id}`, 
