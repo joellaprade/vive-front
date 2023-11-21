@@ -62,6 +62,8 @@ var authentication = {
     password: ''
 }
 
+var eventosIngresados = [];
+
 const getEventLength = () => {
     eventLength = 0;
     if(firstMonth == lastMonth){
@@ -234,6 +236,18 @@ const reloadd = () => {
     window.location.reload();
 }
 
+const injectEvents = () => {
+    var container = document.querySelector('.event-list');
+
+    eventosIngresados.forEach(evento => {
+        container.innerHTML += `
+            <div>
+                
+            </div>
+        `
+    })
+}
+
 const postBtn = document.getElementById('post')
 postBtn.addEventListener('click', postInfo)
 postBtn.addEventListener('click', () => {
@@ -256,3 +270,15 @@ async function postInfo(e){
             })
     })
 }
+
+async function getInfo(e){
+    e.preventDefault();
+    const res = await fetch(baseUrl + 'getEvents', 
+        {
+            method: 'GET'
+        })
+    eventosIngresados = await res.json()
+    injectEvents();
+}
+
+getInfo()
