@@ -270,30 +270,24 @@ const setEventosListener = (container) => {
 }
 
 const selector = (evento, children, icon) => {
-    var eventosArray = [].slice.call(evento.querySelector(".icons").children)
+    [].slice.call(document.querySelectorAll('.icons')).forEach(container => {
+        [].slice.call(container.children).forEach(icon => {
+            icon.className = "";
+        })
+    })
 
     if(icon == evento.querySelector(".icons").children[0]) {
         requestSelection.isEdit = true;
         requestSelection.isDelete = false;
         requestSelection.id = evento.id;
-
-        eventosArray.forEach(icon => {
-            icon.className = "";
-        })
-
         icon.classList.add("selected-edit")
+
     }else if(icon == evento.querySelector(".icons").children[1]) {
         requestSelection.isEdit = false;
         requestSelection.isDelete = true;
         requestSelection.id = evento.id;
-
-        eventosArray.forEach(icon => {
-            icon.className = "";
-        })
-
         icon.classList.add("selected-delete")
     }
-    console.log(requestSelection)
 }
 
 const determineRequest = () => {
