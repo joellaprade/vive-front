@@ -25,7 +25,10 @@ form > div > label{
 }
 
 .event-list {
-    
+    width: 50%;
+    background-color: white;
+    height: 400px;
+    border: 2px solid rgba(0, 0, 0, 0.165);
 }
 
 @media screen and (max-width: 700px){
