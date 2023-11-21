@@ -270,7 +270,7 @@ const setEventosListener = (container) => {
 }
 
 const selector = (evento, children, icon) => {
-    var eventosArray = [].splice.call(evento.querySelector(".icons").children)
+    var eventosArray = [].slice.call(evento.querySelector(".icons").children)
 
     if(icon == evento.querySelector(".icons").children[0]) {
         requestSelection.isEdit = true;
