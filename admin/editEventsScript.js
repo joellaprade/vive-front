@@ -250,10 +250,10 @@ const injectEvents = () => {
         </div>
         `
     })
-    setEventosListener();
+    setEventosListener(container);
 }
 
-const setEventosListener = () => {
+const setEventosListener = (container) => {
     var children = [].slice.call(container.children)
     console.log(children)
     // children.forEach()
