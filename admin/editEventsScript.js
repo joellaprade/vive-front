@@ -272,12 +272,12 @@ const setEventosListener = (container) => {
             requestSelection.isDelete = true;
             requestSelection.id = evento.id;
         })
-        evento.querySelector(".icons").children[0].addEventListener('touchend', () => {
+        evento.querySelector(".icons").children[0].addEventListener('touchstart', () => {
             requestSelection.isEdit = true;
             requestSelection.isDelete = false;
             requestSelection.id = evento.id;
         })
-        evento.querySelector(".icons").children[1].addEventListener('touchend', () => {
+        evento.querySelector(".icons").children[1].addEventListener('touchstart', () => {
             requestSelection.isEdit = false;
             requestSelection.isDelete = true;
             requestSelection.id = evento.id;
