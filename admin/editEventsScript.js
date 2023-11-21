@@ -316,15 +316,15 @@ async function putInfo(id, e){
     e.preventDefault();
     console.log(setDatos(), id)
     const res = await fetch(baseUrl + `putEvent/${id}`, 
-        {
-            method: 'PUT',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify({
-                parcel: setDatos(),
-                authentication: setAuthentication()
-            })
+    {
+        method: 'PUT',
+        headers: {
+            "Content-Type": 'application/json'
+        },
+        body: JSON.stringify({
+            parcel: setDatos(),
+            authentication: setAuthentication()
+        })
     })
 }
 
@@ -334,7 +334,7 @@ async function deleteInfo(id, e){
     {
         method: 'DELETE',
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": 'application/json'
         },
         body: JSON.stringify({authentication: setAuthentication()})
     })
