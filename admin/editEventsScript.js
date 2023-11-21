@@ -290,11 +290,11 @@ const selector = (evento, children, icon) => {
     }
 }
 
-const determineRequest = () => {
+const determineRequest = (id) => {
     if(requestSelection.isEdit){
-        //putInfo();
+        //putInfo(id);
     }else if(requestSelection.isDelete){
-        //deleteInfo();
+        //deleteInfo(id);
     }
     else {
         reloadd();
@@ -302,16 +302,18 @@ const determineRequest = () => {
 }
 
 const submitBtn = document.getElementById('submit')
-submitBtn.addEventListener('click', determineRequest)
+submitBtn.addEventListener('click', () => {
+    determineRequest(requestSelection.id)
+})
 submitBtn.addEventListener('click', () => {
     setTimeout(() => {
         reloadd();
     }, 500)
 })
 
-async function putInfo(e){
+async function putInfo(id, e){
     e.preventDefault();
-    const res = await fetch(baseUrl + 'putEvent', 
+    const res = await fetch(baseUrl + `putEvent/${id}`, 
         {
             method: 'PUT',
             headers: {
@@ -324,7 +326,7 @@ async function putInfo(e){
     })
 }
 
-async function deleteInfo(e){
+async function deleteInfo(id, e){
     e.preventDefault();
     const res = await fetch(baseUrl + 'deleteEvent', 
         {
