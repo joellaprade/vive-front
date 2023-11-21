@@ -336,7 +336,7 @@ async function deleteInfo(id, e){
         headers: {
             'Content-Type': 'application/json'
         },
-        authentication: setAuthentication()
+        body: JSON.stringify({authentication: setAuthentication()})
     })
 }
 
