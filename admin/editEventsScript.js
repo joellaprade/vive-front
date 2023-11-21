@@ -290,10 +290,10 @@ const selector = (evento, children, icon) => {
     }
 }
 
-const determineRequest = (id) => {
+const determineRequest = (id, e) => {
     console.log(requestSelection.isEdit)
     if(requestSelection.isEdit){
-        putInfo(id);
+        putInfo(id, e);
     }else if(requestSelection.isDelete){
         //deleteInfo(id);
     }
@@ -312,7 +312,7 @@ submitBtn.addEventListener('click', () => {
     }, 500)
 })
 
-async function putInfo(id, e){
+async function putInfo(e, id){
     e.preventDefault();
     console.log(setDatos(), id)
     const res = await fetch(baseUrl + `putEvent/${id}`, 
