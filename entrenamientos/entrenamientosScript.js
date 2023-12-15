@@ -151,12 +151,6 @@ var entrenamientos = [
             <h3 style="margin-top: 70px;">Inversi&oacute;n</h3>
             <p><b>Precio Regular:</b> $259</p>
             <p><b>Precio con Acompa&ntilde;ante:</b> $359</p>
-
-        <h3 style="margin-top: 100px;">*Fechas por definir* <br> </h3>
-        <p>Cont&aacute;ctanos para mas informaci&oacute;n por WhatsApp:</p>
-        <button>
-            <a target="_blank" href="https://wa.me/50688219659">WhatsApp</a>
-        </button>
             
         </div>
         
@@ -213,11 +207,6 @@ var entrenamientos = [
             <p><b>Precio Regular:</b> $259</p>
             <p><b>Precio con Acompa&ntilde;ante:</b> $359</p>
 
-            <h3 style="margin-top: 100px;">*Fechas por definir* <br> </h3>
-            <p>Cont&aacute;ctanos para mas informaci&oacute;n por WhatsApp:</p>
-            <button>
-                <a target="_blank" href="https://wa.me/50688219659">WhatsApp</a>
-            </button>
         </div>
 
 
@@ -230,31 +219,44 @@ var entrenamientos = [
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         Se trata de una de las simulaciones
-                        más intensas y poderosas disponibles
-                        para formar líderes a través del
+                        m&aacute;s intensas y poderosas disponibles
+                        para formar l&iacute;deres a trav&eacute;s del
                         aprendizaje vivencial.
                         Es un entrenamiento con la capacidad
                         de impactar a los participantes de
                         forma positiva, basado en principios
                         como integridad, respeto, valor,
-                        compasión, honestidad y lealtad.
+                        compasi&oacute;n, honestidad y lealtad.
                         Fue creado en 1977 por George
                         Leonard, autor de varios libros,
                         conferencista, maestro de artes
                         marciales, veterano piloto de guerra
-                        USA vs Japón.
+                        USA vs Jap&oacute;n.
                         Feedback de Forbes Mexico sobre The
-                        Samurai Game&copy;.
+                        Samurai Game&copy;. <br><br>
+
+                        <b>Generar en el participante:</b> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Liderazgo efectivo <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Toma de decisiones ante circunstancias adversas y bajo presi&oacute;n <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Creaci&oacute;n de estrategias <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; -Foco en objetivos <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Trabajo en equipo <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Sentido de pertenencia <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Valores y principios <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Conciencia de responsabilidad y perseverancia <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Escucha efectiva <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-Adaptabilidad al cambio <br>
+
                     </p>
                 </div>
-                <img src="../assets/mam.jpeg">
+                <img src="../assets/samurai.png">
             </div>
             
 
             <h3 style="margin-top: 70px;">Horario</h3>
             <p><b>2 d&iacute;as</b></p>
-            <p>-<b>S&aacute;bado</b> 10am - 9pm</p>
-            <p>-<b>Domingo</b> 10am - 9pm</p>
+            <p>-<b>S&aacute;bado</b> 9am - 9pm</p>
+            <p>-<b>Domingo</b> 10am - 8pm</p>
 
             <h3 style="margin-top: 70px;">Inversi&oacute;n</h3>
             <p><b>Precio Regular:</b> $299</p>
@@ -264,12 +266,6 @@ var entrenamientos = [
 
             <p><b>Precio Regular:</b> $250</p>
             <p><b>Precio con Acompa&ntilde;ante:</b> $450</p>
-
-            <h3 style="margin-top: 100px;">*Fechas por definir* <br> </h3>
-            <p>Cont&aacute;ctanos para mas informaci&oacute;n por WhatsApp:</p>
-            <button>
-                <a target="_blank" href="https://wa.me/50688219659">WhatsApp</a>
-            </button>
         `,
         id: 3
     },
