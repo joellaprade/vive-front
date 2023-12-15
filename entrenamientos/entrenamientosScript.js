@@ -167,8 +167,8 @@ var entrenamientos = [
 
 
 
-        <div class="entrenamiento" style="margin: 0px;">
-            <h2>&iquest;Qu&eacute; es el MAM?</h2>
+        <div class="entrenamiento">
+            <h2>&iquest;Qu&eacute; es el MAM&copy;?</h2>
             <div class="dual-container">
                 <div>
                     <p>
@@ -218,8 +218,58 @@ var entrenamientos = [
             <button>
                 <a target="_blank" href="https://wa.me/50688219659">WhatsApp</a>
             </button>
-
         </div>
+
+
+
+
+        <div class="entrenamiento" style="margin: 0px;">
+            <h2>&iquest;Qu&eacute; es el Samurai Game&copy;?</h2>
+            <div class="dual-container">
+                <div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Se trata de una de las simulaciones
+                        más intensas y poderosas disponibles
+                        para formar líderes a través del
+                        aprendizaje vivencial.
+                        Es un entrenamiento con la capacidad
+                        de impactar a los participantes de
+                        forma positiva, basado en principios
+                        como integridad, respeto, valor,
+                        compasión, honestidad y lealtad.
+                        Fue creado en 1977 por George
+                        Leonard, autor de varios libros,
+                        conferencista, maestro de artes
+                        marciales, veterano piloto de guerra
+                        USA vs Japón.
+                        Feedback de Forbes Mexico sobre The
+                        Samurai Game&copy;.
+                    </p>
+                </div>
+                <img src="../assets/mam.jpeg">
+            </div>
+            
+
+            <h3 style="margin-top: 70px;">Horario</h3>
+            <p><b>2 d&iacute;as</b></p>
+            <p>-<b>S&aacute;bado</b> 10am - 9pm</p>
+            <p>-<b>Domingo</b> 10am - 9pm</p>
+
+            <h3 style="margin-top: 70px;">Inversi&oacute;n</h3>
+            <p><b>Precio Regular:</b> $299</p>
+            <p><b>Precio con Acompa&ntilde;ante:</b> $500</p>
+            <br>
+            <p><b><u>Pronto Pago</u></b></p>
+
+            <p><b>Precio Regular:</b> $250</p>
+            <p><b>Precio con Acompa&ntilde;ante:</b> $450</p>
+
+            <h3 style="margin-top: 100px;">*Fechas por definir* <br> </h3>
+            <p>Cont&aacute;ctanos para mas informaci&oacute;n por WhatsApp:</p>
+            <button>
+                <a target="_blank" href="https://wa.me/50688219659">WhatsApp</a>
+            </button>
         `,
         id: 3
     },
