@@ -79,6 +79,16 @@ const setDates = () => {
         }
     }
 
+    while(count < 4){
+        document.getElementById('upcomming-events').innerHTML += 
+        `<a href="#" id="event-${count}"></a>`
+
+        document.getElementById('upcomming-events-mobil').innerHTML +=
+        `<a href="#" id="event-${count}"></a>`
+        
+        count++;
+    }
+
 }
 
 
